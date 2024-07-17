@@ -22,12 +22,16 @@ class Jogo {
         }
 
         // Fim do jogo
-        if (jogador.getVida() > 0) {
+        finalizarJogo(jogador);
+    }
+
+	private void finalizarJogo(Personagem jogador) {
+		if (jogador.getVida() > 0) {
             System.out.println("Jogador venceu!");
         } else {
             System.out.println("Inimigo venceu!");
         }
-    }
+	}
 
     private int calcularDano(Personagem p) {
         return (int) (Math.random() * 10);
